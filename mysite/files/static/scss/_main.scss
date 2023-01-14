@@ -1,0 +1,103 @@
+.main {
+    flex-grow: 1;
+    display: flex;
+    max-height: calc(100vh - 100px);
+}
+
+.left-menu {
+    padding: 20px;
+
+    // .left-menu__title
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    // .left-menu__ul
+    &__ul {
+        color: #ccc;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__li::before {
+        transition: all 0.3s ease 0s;
+        width: 0%;
+        overflow: hidden;
+        color: #000;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border-bottom: 1px solid #000;
+    }
+
+    // .left-menu__li
+    &__li {
+        // position: relative;
+        white-space: nowrap;
+        transition: all 0.3s ease 0s;
+        border-bottom: 1px solid #333;
+    }
+
+    &__li:hover {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+        
+    // &__li:hover::before {
+    //     width: 100%;
+    // }
+
+    // &__li:nth-child(1)::before {
+    //     content: "Главная";
+    // }
+
+    // &__li:nth-child(2)::before {
+    //     content: "Востребованность";
+    // }
+
+    // &__li:nth-child(3)::before {
+    //     content: "География";
+    // }
+
+    // &__li:nth-child(4)::before {
+    //     content: "Навыки";
+    // }
+
+    // &__li:nth-child(5)::before {
+    //     content: "Последние вакансии";
+    // }
+}
+
+.right {
+    flex-grow: 1;
+    overflow: auto;
+    max-height: 100%;
+    background-color: #c5807d;
+    padding: 20px;
+
+    &__title {
+        text-align: center;
+    }
+}
+
+.li-right {
+
+    // .li-right__text
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    // .li-right__img
+    &__img img {
+        max-height: 600px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    &__p {
+        margin-bottom: 15px;
+    }
+}

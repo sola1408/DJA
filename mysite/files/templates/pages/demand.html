@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+        <div class="right">
+          <h1 class="right__title">Востребованность</h1>
+          <ul>
+            {% for object in objects %}
+                <li>
+                    <h3 class="li-right__text">{{ object.name }}</h3>
+                    <img src='{{ object.image.url }}' alt='{{ object.name }}' class="li-right__img" width="800">
+                </li>
+            {% empty %}
+                <li>Информация ещё не добавлена</li>
+            {% endfor %}
+          </ul>
+        </div>
+{% endblock %}

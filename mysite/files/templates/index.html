@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'dist/css/style.css' %}" />
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__left">
+          <div class="header__img">
+            <img src="{% static 'img/logo.svg' %}" alt="logo" />
+          </div>
+          <h3 class="header__text">Analyst</h3>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <aside class="left-menu">
+        <h3 class="left-menu__title">Страницы</h3>
+        <ul class="left-menu__ul">
+          <li class="left-menu__li">
+            <a href="/">Главная</a>
+          </li>
+          <li class="left-menu__li">
+            <a href="demand">Востребованность</a>
+          </li>
+          <li class="left-menu__li">
+            <a href="geography">География</a>
+          </li>
+          <li class="left-menu__li">
+            <a href="skills">Навыки</a>
+          </li>
+          <li class="left-menu__li">
+            <a href="vacancies">Последние вакансии</a>
+          </li>
+        </ul>
+      </aside>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+      </div>
+    </footer>
+    <h2>Головина Ольга</h2>
+    <h3>РИ-210947</h3>
+  </div>
+</body>
+
+</html>

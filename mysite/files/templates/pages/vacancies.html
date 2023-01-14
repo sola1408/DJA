@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content %}
+        <div class="right">
+          <h1 class="right__title">Вакансии</h1>
+          {% for object in objects %}
+                <h2>{{ object.name }}</h2>
+                <h3>Описание - {{ object.requir }}</h3>
+                <h3>Требования - {{ object.respon }}</h3>
+                <h3>Город - {{ object.area }}</h3>
+                <h3>Оклад от {{ object.salary.from }} {{ object.salary.currency }}</h3>
+                <h3>Дата публикации - {{ object.published_at }}</h3>
+                <br/>
+          {% endfor %}
+        </div>
+{% endblock %}

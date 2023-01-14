@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+        <div class="right">
+          <h1 class="right__title">Навыки</h1>
+          <table>
+            <tr class='labels'><th>№</th><th>2021</th><th>2022</th></tr>
+            {% for object2021, object2022 in objects %}
+                <tr class='row'><td>{{ object2021.key_skills }}</td><td>{{ object2021 }}</td><td>{{ object2022 }}</td></tr>
+            {% endfor %} 
+          </table>
+        </div>
+{% endblock %}
