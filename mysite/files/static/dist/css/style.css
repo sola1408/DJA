@@ -193,3 +193,7 @@ body {
 .row {
     border: 1px solid grey;
 }
+
+.right__h2{
+  text-align: center;
+}
